@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.FlightController">
+   <content>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="1019.0" style="-fx-background-color: black red;">
+         <children>
+            <ImageView fitHeight="109.0" fitWidth="1023.0" layoutY="110.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../img/wallpaper1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="492.0" fitWidth="1023.0" layoutY="219.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../img/wallpaper2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="1030.0" layoutX="-5.0" layoutY="-7.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../img/xd.PNG" />
+               </image>
+            </ImageView>
+            <Button layoutX="36.0" layoutY="165.0" mnemonicParsing="false" onAction="#buttomDate" prefHeight="53.0" prefWidth="106.0" style="-fx-background-color: #e24848;" text="DATE ▼" textAlignment="CENTER" textFill="#403d3d">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="184.0" layoutY="165.0" mnemonicParsing="false" onAction="#buttomTime" prefHeight="53.0" prefWidth="106.0" style="-fx-background-color: #e24848;" text="TIME ▼" textAlignment="CENTER" textFill="#403d3d">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="359.0" layoutY="165.0" mnemonicParsing="false" onAction="#buttomAirline" prefHeight="53.0" prefWidth="106.0" style="-fx-background-color: #e24848;" text="AIRLINE ▼" textAlignment="CENTER" textFill="#403d3d">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="544.0" layoutY="165.0" mnemonicParsing="false" onAction="#buttomFlight" prefHeight="53.0" prefWidth="106.0" style="-fx-background-color: #e24848;" text="FLIGHT ▼" textAlignment="CENTER" textFill="#403d3d">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="719.0" layoutY="165.0" mnemonicParsing="false" onAction="#buttomTo" prefHeight="53.0" prefWidth="106.0" style="-fx-background-color: #e24848;" text="TO ▼" textAlignment="CENTER" textFill="#403d3d">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="887.0" layoutY="165.0" mnemonicParsing="false" onAction="#buttomGate" prefHeight="53.0" prefWidth="106.0" style="-fx-background-color: #e24848;" text="GATE ▼" textAlignment="CENTER" textFill="#403d3d">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <TextField fx:id="flightsField" layoutX="230.0" layoutY="127.0" prefHeight="33.0" prefWidth="186.0" />
+            <Button layoutX="418.0" layoutY="127.0" mnemonicParsing="false" onAction="#generate" prefHeight="33.0" prefWidth="218.0" style="-fx-background-color: #239975;" text="GENERATE LIST" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="22.0" layoutY="728.0" prefWidth="65.0" text="*/*" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchField" layoutX="104.0" layoutY="730.0" prefHeight="33.0" prefWidth="186.0" />
+            <Button layoutX="297.0" layoutY="728.0" mnemonicParsing="false" onAction="#search" prefHeight="36.0" prefWidth="151.0" style="-fx-background-color: black;" text="SEARCH FLIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="710.0" layoutY="729.0" mnemonicParsing="false" onAction="#previousPage" prefHeight="36.0" prefWidth="172.0" style="-fx-background-color: black;" text="◄ PREVIOUS PAGE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="878.0" layoutY="730.0" mnemonicParsing="false" onAction="#nextPage" prefHeight="36.0" prefWidth="151.0" style="-fx-background-color: black;" text="NEXT PAGE ►" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="currentTime" layoutX="29.0" layoutY="125.0" prefHeight="38.0" prefWidth="151.0" textFill="#4ae871">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateColumn" layoutX="20.0" layoutY="230.0" lineSpacing="22.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="airlineColumn" layoutX="370.0" layoutY="230.0" lineSpacing="22.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="flightColumn" layoutX="558.0" layoutY="230.0" lineSpacing="22.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </content>
+</ScrollPane>
